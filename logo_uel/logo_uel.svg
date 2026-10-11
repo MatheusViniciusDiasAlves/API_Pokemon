@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <filter id="cut" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="2" seed="11" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="7"/>
+    </filter>
+    <clipPath id="disc"><circle cx="540" cy="540" r="352"/></clipPath>
+    <path id="top" d="M540 932A392 392 0 0 1 540 148A392 392 0 0 1 540 932"/>
+    <path id="bot" d="M540 102A438 438 0 0 0 540 978A438 438 0 0 0 540 102"/>
+  </defs>
+
+  <!-- base -->
+  <circle cx="540" cy="540" r="525" fill="#1F4E4A"/>
+  <circle cx="540" cy="540" r="352" fill="#F3E7CF"/>
+  <circle cx="540" cy="540" r="368" fill="none" stroke="#E2A72E" stroke-width="5"/>
+
+  <!-- cut-paper scene -->
+  <g clip-path="url(#disc)">
+    <g filter="url(#cut)">
+      <!-- sun -->
+      <circle cx="360" cy="368" r="62" fill="#E2A72E"/>
+      <!-- leaf -->
+      <path d="M640 262c64-30 120 18 108 88c-56 6-100-14-108-88z" fill="#5E9E7B"/>
+      <path d="M706 214c38 20 58 62 38 104c-42-14-56-58-38-104z" fill="#2F7A67"/>
+      <!-- door -->
+      <path d="M548 720V452c0-62 48-104 108-104s108 42 108 104v268z" fill="#C4502F"/>
+      <path d="M598 720V462c0-36 26-60 58-60s58 24 58 60v258z" fill="#1F4E4A"/>
+      <path d="M598 560c14-52 70-72 116-26v186h-116z" fill="#E2A72E" opacity=".95"/>
+      <!-- path -->
+      <path d="M190 760C300 690 420 800 530 712C580 672 640 700 700 740L700 790C600 760 580 840 480 835C360 830 300 770 190 800z" fill="#E3A187"/>
+      <!-- figures -->
+      <g>
+        <!-- tall -->
+        <circle cx="318" cy="470" r="30" fill="#1F4E4A"/>
+        <path d="M262 735c-6-120 14-210 56-210s68 90 62 210c-30 14-90 14-118 0z" fill="#1F4E4A"/>
+        <!-- mid -->
+        <circle cx="420" cy="540" r="26" fill="#B03A48"/>
+        <path d="M372 760c-8-90 8-166 48-166s60 76 52 166c-28 12-74 12-100 0z" fill="#B03A48"/>
+        <!-- small -->
+        <circle cx="494" cy="620" r="22" fill="#E2A72E"/>
+        <path d="M454 770c-6-70 6-128 40-128s46 58 40 128c-22 10-58 10-80 0z" fill="#E2A72E"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- text -->
+  <g font-family="Inter, 'Liberation Sans', sans-serif" font-weight="700" font-size="46" fill="#F6EBD3">
+    <text text-anchor="middle"><textPath href="#top" startOffset="50%" textLength="1330" lengthAdjust="spacing">ESCOLARIZAÇÃO DE CRIANÇAS E ADOLESCENTES</textPath></text>
+    <text text-anchor="middle"><textPath href="#bot" startOffset="50%" textLength="900" lengthAdjust="spacing">COM AUTISMO E PSICOSE <tspan fill="#E2A72E">•</tspan> UEL</textPath></text>
+  </g>
+  <circle cx="153" cy="696" r="9" fill="#E2A72E"/>
+  <circle cx="927" cy="696" r="9" fill="#E2A72E"/>
+</svg>
