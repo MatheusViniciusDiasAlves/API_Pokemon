@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <filter id="wob" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="14"/>
+    </filter>
+    <filter id="crayon" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="14" result="d"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3" result="g"/>
+      <feColorMatrix in="g" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -0.5 1.15" result="ga"/>
+      <feComposite in="d" in2="ga" operator="in"/>
+    </filter>
+  </defs>
+
+  <rect width="1080" height="1080" fill="#FFF1CF"/>
+  <circle cx="540" cy="540" r="505" fill="#8FD0EE" filter="url(#crayon)"/>
+
+  <g filter="url(#wob)" stroke-linecap="round" stroke-linejoin="round">
+    <!-- sun -->
+    <g transform="translate(205 235)">
+      <circle r="52" fill="#FFC93C" stroke="#7A4A1E" stroke-width="9"/>
+      <g stroke="#FF9F1C" stroke-width="11" fill="none">
+        <path d="M0-78v-26M0 78v26M-78 0h-26M78 0h26M-55-55l-18-18M55 55l18 18M55-55l18-18M-55 55l-18 18"/>
+      </g>
+    </g>
+    <!-- moon -->
+    <path d="M860 160a70 70 0 1 0 60 105a58 58 0 0 1-60-105z" fill="#FFE98A" stroke="#7A4A1E" stroke-width="9"/>
+
+    <!-- cloud head -->
+    <path d="M300 640c-70-10-105-80-70-135c18-28 48-42 78-38c12-70 80-118 150-104c40-52 130-58 175-4c66-12 128 38 130 105c58 14 90 78 60 130c-22 38-68 52-108 40c-30 40-90 52-135 28c-38 28-98 28-135-4c-48 22-108 4-145-18z"
+          fill="#FFB3C7" stroke="#7A4A1E" stroke-width="11"/>
+    <!-- face -->
+    <path d="M410 520q25-24 50 0" fill="none" stroke="#7A4A1E" stroke-width="12"/>
+    <path d="M620 520q25-24 50 0" fill="none" stroke="#7A4A1E" stroke-width="12"/>
+    <path d="M490 585q50 45 100 0" fill="none" stroke="#7A4A1E" stroke-width="12"/>
+    <ellipse cx="390" cy="580" rx="30" ry="20" fill="#FF7A9C" opacity=".7"/>
+    <ellipse cx="690" cy="580" rx="30" ry="20" fill="#FF7A9C" opacity=".7"/>
+
+    <!-- spiral thought on top -->
+    <path d="M540 330c0-42 62-48 70-8c8 40-48 64-78 34c-28-28-4-78 36-82c52-4 82 52 54 96"
+          fill="none" stroke="#7B4DD8" stroke-width="13"/>
+    <!-- stars -->
+    <path d="M300 345l14 32l34 4l-26 24l8 34l-30-18l-30 18l8-34l-26-24l34-4z" fill="#7B4DD8" stroke="#4B2A9A" stroke-width="7" transform="translate(-10 -40) scale(.9)"/>
+    <path d="M790 330l12 28l30 3l-23 21l7 30l-26-16l-26 16l7-30l-23-21l30-3z" fill="#2EC4B6" stroke="#0E7C72" stroke-width="7"/>
+    <path d="M880 470l9 21l23 2l-17 16l5 23l-20-12l-20 12l5-23l-17-16l23-2z" fill="#FF8A3D" stroke="#B34A0B" stroke-width="6"/>
+    <!-- dots / bits -->
+    <circle cx="170" cy="560" r="16" fill="#2EC4B6"/>
+    <circle cx="215" cy="610" r="10" fill="#FF8A3D"/>
+    <circle cx="905" cy="600" r="14" fill="#7B4DD8"/>
+    <circle cx="150" cy="430" r="9" fill="#FF5C8A"/>
+    <path d="M840 740q18-24 36 0q18 24 36 0" fill="none" stroke="#FF5C8A" stroke-width="10"/>
+    <path d="M180 760q18-24 36 0q18 24 36 0" fill="none" stroke="#2EC4B6" stroke-width="10"/>
+
+    <!-- small heart under cloud -->
+    <path d="M540 790c-50-34-70-60-48-86c16-18 40-8 48 8c8-16 32-26 48-8c22 26 2 52-48 86z" fill="#FF5C8A" stroke="#7A4A1E" stroke-width="9"/>
+  </g>
+</svg>
